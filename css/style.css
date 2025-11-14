@@ -12828,14 +12828,14 @@ h5,
   max-width: 1290px;
 }
 
-.project-destination .img {
+/* .project-destination .img {
   display: block;
   width: 100%;
-  height: 320px;
+  height: 130px;
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
   -ms-border-radius: 5px;
-  border-radius: 5px;
+  border-radius: 300px;
 }
 
 .project-destination .text {
@@ -12854,8 +12854,223 @@ h5,
   margin-top: -8px;
   padding: 4px 10px;
   background: #f15d30;
+} */
+
+
+
+
+
+#control-buttons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
 }
 
+.ctrl-btn {
+  background: #ffffff;
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  color: #007bff;
+  font-size: 16px;
+  cursor: pointer;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease;
+}
+
+.ctrl-btn:hover {
+  background: #007bff;
+  color: #fff;
+  transform: scale(1.1);
+}
+
+
+
+
+
+
+
+/* ===== Swiper Section ===== */
+.image-slider-section {
+  position: relative;
+  width: 100%;
+  padding: 80px 0;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  overflow: hidden;
+}
+
+/* Overlay (optional) */
+.image-slider-section .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(255, 255, 255, 0.1);
+  z-index: 0;
+}
+
+/* Limit container width */
+.image-slider-section .swiper {
+  position: relative;
+  z-index: 1;
+  width: 90%;
+  max-width: 1300px;
+  margin: 0 auto;
+}
+
+/* ===== Slides ===== */
+.image-slider-section .swiper-slide {
+  text-align: center;
+}
+
+.image-slider-section .img-container {
+  background: #fff;
+  border-radius: 200px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.15);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  width: 100%;
+  max-width: 180px; /* 🟢 smaller cards to fit 6 */
+  margin: 0 auto;
+}
+
+.image-slider-section .img-container:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+}
+
+.image-slider-section .img-container img {
+  width: 100%;
+  height: 130px; /* 🟢 reduced height for compact layout */
+  object-fit: cover;
+  display: block;
+  border-radius: 20px;
+}
+
+.image-slider-section .img-title {
+  margin-top: 10px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #222;
+  text-align: center;
+}
+
+/* ===== Swiper Arrows ===== */
+.swiper-button-next,
+.swiper-button-prev {
+  color: #fff;
+  width: 45px;
+  height: 45px;
+  background: rgba(0, 0, 0, 0.45);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+.swiper-button-next { right: 10px; }
+.swiper-button-prev { left: 10px; }
+
+.swiper-button-next:hover,
+.swiper-button-prev:hover {
+  color: #000;
+  background: rgba(255, 255, 255, 0.9);
+  transform: scale(1.1);
+}
+
+/* Pagination */
+.swiper-pagination-bullet {
+  background: #fff;
+  opacity: 0.8;
+}
+.swiper-pagination-bullet-active {
+  background: #ffcc00;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .image-slider-section .swiper {
+    width: 90%;
+  }
+}
+@media (max-width: 768px) {
+  .image-slider-section {
+    padding: 60px 0;
+  }
+  .image-slider-section .img-container {
+    max-width: 220px;
+  }
+  .image-slider-section .img-container img {
+    height: 160px;
+  }
+}
+.image-slider-section h2.top-destination-heading {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  font-size: 2.2rem;
+  color: rgba(0, 0, 0, 0.8);
+  font-weight: 600;
+  margin-bottom: 40px;
+  letter-spacing: 1px;
+}
+
+
+/* Subtle underline effect under heading */
+/* .image-slider-section h2.top-destination-heading::after {
+  content: "";
+  display: block;
+  width: 80px;
+  height: 4px;
+  background: #ffcc00;
+  margin: 10px auto 0;
+  border-radius: 2px;
+} */
+
+/* Responsive adjustments for smaller devices */
+@media (max-width: 768px) {
+  .image-slider-section h2.top-destination-heading {
+    font-size: 1.6rem;
+    margin-bottom: 25px;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* 
 .project-destination .text h3:after,
 .project-destination .text h3:before {
   position: absolute;
@@ -12912,7 +13127,7 @@ h5,
 .project-destination:hover .text span {
   padding-right: 20px;
   background: #f15d30;
-}
+} */
 
 .project-wrap {
   margin-bottom: 30px;
@@ -13250,6 +13465,14 @@ textarea.form-control {
   font-size: 20px;
   font-weight: 600;
 }
+
+
+
+
+
+
+
+
 
 .ftco-section {
   padding: 7em 0;

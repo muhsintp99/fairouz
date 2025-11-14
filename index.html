@@ -50,6 +50,7 @@
 	<link rel="stylesheet" href="css/jquery.timepicker.css">
 	<link rel="stylesheet" href="css/flaticon.css">
 	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 
 	<!-- Schema.org JSON-LD for SEO -->
 	<script type="application/ld+json">
@@ -82,222 +83,143 @@
 			<div class="collapse navbar-collapse" id="ftco-nav">
 				<ul class="navbar-nav ml-auto">
 					<li class="nav-item active"><a href="index.html" class="nav-link">Home</a></li>
-					<li class="nav-item"><a href="packages.html" class="nav-link">Our Packages</a></li>
+					<li class="nav-item"><a href="destination.html" class="nav-link">Our Packages</a></li>
 					<li class="nav-item"><a href="about.html" class="nav-link">About Us</a></li>
 					<!-- <li class="nav-item"><a href="destination.html" class="nav-link">Destination</a></li>
 					<li class="nav-item"><a href="hotel.html" class="nav-link">Hotel</a></li>
 					<li class="nav-item"><a href="blog.html" class="nav-link">Blog</a></li> -->
 					<li class="nav-item"><a href="contact.html" class="nav-link">Contact Us</a></li>
+					<li class="nav-item"><a href="#" class="nav-link">Login</a></li>
+					<li class="nav-item"><a href="#" class="nav-link">sign up</a></li>
 				</ul>
 			</div>
 		</div>
 	</nav>
-	<!-- END nav -->
 
-	<div class="hero-wrap js-fullheight" style="background-image: url('./images/hero/hero1.jpg');">
-		<div class="overlay"></div>
-		<div class="container">
-			<div class="row no-gutters slider-text js-fullheight align-items-center" data-scrollax-parent="true">
-				<div class="col-md-7 ftco-animate">
+
+	<div class="hero-wrap .js-fullheight-home"
+		style="background-image: url('./images/hero/hero1.jpg'); background-size: cover; background-position: center;">
+		<!-- dark overlay -->
+		<div style="background: rgba(0, 0, 0, 0.4); position: absolute; inset: 0;"></div>
+
+		<div class="container position-relative">
+			<div class="row no-gutters slider-text .js-fullheight-home align-items-center" data-scrollax-parent="true">
+
+				<!-- LEFT: Hero text -->
+				<div class="col-md-6 text-white">
 					<span class="subheading">Find Your Ideal Stay</span>
-					<h1 class="mb-4">Where Do You <br>
-						Want To Go?</h1>
-					<p class="caps">Planning for a trip? We will organize your trip with the best places and within best
-						budget!</p>
-
-						<div class="btn btn-primary mt-4 p-4">
-							View Packages <span class="fa fa-long-arrow-right me-4"></span>
-						</div>
+					<h1 class="mb-4">Where Do You <br> Want To Go?</h1>
+					<p class="caps">
+						Planning for a trip? We will organize your trip with the best places and within best budget!
+					</p>
+					<div class="btn btn-primary mt-4 p-3">
+						View Packages <span class="fa fa-long-arrow-right ms-2"></span>
+					</div>
 				</div>
-				<a href="https://vimeo.com/45830194"
-					class="icon-video popup-vimeo d-flex align-items-center justify-content-center mb-4">
-					<span class="fa fa-play"></span>
-				</a>
+
+				<!-- RIGHT: Enquiry form -->
+				<div class="col-md-6 d-flex justify-content-center">
+					<div style="
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
+            width: 75%;
+            padding: 15px 25px;
+            margin-left: 60px;
+            border-radius: 10px;
+			margin-top: 80px;
+
+          " class="text-white">
+						<h4 class="text-center text-white mb-3">Enquire For Your Trip</h4>
+
+						<form action="#" class="text-white">
+							<!-- Full Name -->
+							<div class="mb-2">
+								<label class="small fw-bold d-block"
+									style=" font-size: 16px !important;font-weight: 400 !important;">Full Name:</label>
+								<input type="text" class="form-control bg-transparent text-white border-white"
+									placeholder="Enter Full Name" style="height: 33px !important; padding: 2px 6px !important; font-size: 0.8rem !important; line-height: 1 !important;font-weight: 400;
+    font-size: 16px;" />
+							</div>
+
+							<!-- Contact Number -->
+							<div class="mb-2">
+								<label class="small fw-bold d-block"
+									style=" font-size: 16px !important;font-weight: 400 !important;">Contact
+									Number:</label>
+								<input type="tel" class="form-control bg-transparent text-white border-white"
+									placeholder="Enter Contact Number"
+									style="height: 33px !important; padding: 2px 6px !important; font-size: 0.8rem !important; line-height: 1 !important;" />
+							</div>
+
+							<!-- Destination -->
+							<div class="mb-2">
+								<label class="small fw-bold d-block"
+									style=" font-size: 16px !important;font-weight: 400 !important;">Destination:</label>
+								<input type="text" class="form-control bg-transparent text-white border-white"
+									placeholder="Enter Destination"
+									style="height: 33px !important; padding: 2px 6px !important; font-size: 0.8rem !important; line-height: 1 !important;" />
+							</div>
+
+							<!-- Date of Travel (Date Picker) -->
+							<div class="mb-2">
+								<label class="small fw-bold d-block"
+									style=" font-size: 16px !important;font-weight: 400 !important;">Date of
+									Travel:</label>
+								<input type="date" class="form-control bg-transparent text-white border-white"
+									style="height: 33px !important; padding: 2px 6px !important; font-size: 0.8rem !important; line-height: 1 !important;" />
+							</div>
+
+							<!-- Total persons (adults + child) -->
+							<div class="mb-2">
+								<label class="small fw-bold d-block"
+									style=" font-size: 16px !important;font-weight: 400 !important;">Total Number of
+									Persons:</label>
+								<div class="d-flex" style="gap: 10px;"> <!-- ✅ Added gap for spacing -->
+									<input type="number" min="0"
+										class="form-control bg-transparent text-white border-white" placeholder="Adults"
+										style="height: 33px !important; padding: 2px 6px !important; font-size: 0.8rem !important; line-height: 1 !important;" />
+									<input type="number" min="0"
+										class="form-control bg-transparent text-white border-white" placeholder="Child"
+										style="height: 33px !important; padding: 2px 6px !important; font-size: 0.8rem !important; line-height: 1 !important;" />
+								</div>
+							</div>
+
+							<!-- Total number of days -->
+							<div class="mb-3">
+								<label class="small fw-bold d-block"
+									style=" font-size: 16px !important;font-weight: 400 !important;">Total Number of
+									Days:</label>
+								<input type="number" min="1" class="form-control bg-transparent text-white border-white"
+									placeholder="Enter Days"
+									style="height: 33px !important; padding: 2px 6px !important; font-size: 0.8rem !important; line-height: 1 !important;" />
+							</div>
+
+							<!-- Submit -->
+							<div class="text-center">
+								<input type="submit" value="Submit" class="btn btn-primary btn-sm w-75 py-1"
+									style="font-size: 0.9rem;"
+									style=" background-color: #f15d30 ; font-size: 16px !important;font-weight: 400 !important;" />
+							</div>
+						</form>
+					</div>
+				</div>
+
 			</div>
 		</div>
 	</div>
 
-	<section class="ftco-section ftco-no-pb ftco-no-pt">
-		<div class="container">
-			<div class="row">
-				<div class="col-md-12">
-					<div class="ftco-search d-flex justify-content-center">
-						<div class="row">
-							<div class="col-md-12 nav-link-wrap">
-								<div class="nav nav-pills text-center" id="v-pills-tab" role="tablist"
-									aria-orientation="vertical">
-									<a class="nav-link active mr-md-1" id="v-pills-1-tab" data-toggle="pill"
-										href="#v-pills-1" role="tab" aria-controls="v-pills-1"
-										aria-selected="true">Search Tour</a>
 
-									<a class="nav-link" id="v-pills-2-tab" data-toggle="pill" href="#v-pills-2"
-										role="tab" aria-controls="v-pills-2" aria-selected="false">Hotel</a>
 
-								</div>
-							</div>
-							<div class="col-md-12 tab-wrap">
 
-								<div class="tab-content" id="v-pills-tabContent">
-
-									<div class="tab-pane fade show active" id="v-pills-1" role="tabpanel"
-										aria-labelledby="v-pills-nextgen-tab">
-										<form action="#" class="search-property-1">
-											<div class="row no-gutters">
-												<div class="col-md d-flex">
-													<div class="form-group p-4 border-0">
-														<label for="#">Destination</label>
-														<div class="form-field">
-															<div class="icon"><span class="fa fa-search"></span></div>
-															<input type="text" class="form-control"
-																placeholder="Search place">
-														</div>
-													</div>
-												</div>
-												<div class="col-md d-flex">
-													<div class="form-group p-4">
-														<label for="#">Check-in date</label>
-														<div class="form-field">
-															<div class="icon"><span class="fa fa-calendar"></span></div>
-															<input type="text" class="form-control checkin_date"
-																placeholder="Check In Date">
-														</div>
-													</div>
-												</div>
-												<div class="col-md d-flex">
-													<div class="form-group p-4">
-														<label for="#">Check-out date</label>
-														<div class="form-field">
-															<div class="icon"><span class="fa fa-calendar"></span></div>
-															<input type="text" class="form-control checkout_date"
-																placeholder="Check Out Date">
-														</div>
-													</div>
-												</div>
-												<div class="col-md d-flex">
-													<div class="form-group p-4">
-														<label for="#">Price Limit</label>
-														<div class="form-field">
-															<div class="select-wrap">
-																<div class="icon"><span
-																		class="fa fa-chevron-down"></span></div>
-																<select name="" id="" class="form-control">
-																	<option value="">$100</option>
-																	<option value="">$10,000</option>
-																	<option value="">$50,000</option>
-																	<option value="">$100,000</option>
-																	<option value="">$200,000</option>
-																	<option value="">$300,000</option>
-																	<option value="">$400,000</option>
-																	<option value="">$500,000</option>
-																	<option value="">$600,000</option>
-																	<option value="">$700,000</option>
-																	<option value="">$800,000</option>
-																	<option value="">$900,000</option>
-																	<option value="">$1,000,000</option>
-																	<option value="">$2,000,000</option>
-																</select>
-															</div>
-														</div>
-													</div>
-												</div>
-												<div class="col-md d-flex">
-													<div class="form-group d-flex w-100 border-0">
-														<div class="form-field w-100 align-items-center d-flex">
-															<input type="submit" value="Search"
-																class="align-self-stretch form-control btn btn-primary">
-														</div>
-													</div>
-												</div>
-											</div>
-										</form>
-									</div>
-
-									<div class="tab-pane fade" id="v-pills-2" role="tabpanel"
-										aria-labelledby="v-pills-performance-tab">
-										<form action="#" class="search-property-1">
-											<div class="row no-gutters">
-												<div class="col-lg d-flex">
-													<div class="form-group p-4 border-0">
-														<label for="#">Destination</label>
-														<div class="form-field">
-															<div class="icon"><span class="fa fa-search"></span></div>
-															<input type="text" class="form-control"
-																placeholder="Search place">
-														</div>
-													</div>
-												</div>
-												<div class="col-lg d-flex">
-													<div class="form-group p-4">
-														<label for="#">Check-in date</label>
-														<div class="form-field">
-															<div class="icon"><span class="fa fa-calendar"></span></div>
-															<input type="text" class="form-control checkin_date"
-																placeholder="Check In Date">
-														</div>
-													</div>
-												</div>
-												<div class="col-lg d-flex">
-													<div class="form-group p-4">
-														<label for="#">Check-out date</label>
-														<div class="form-field">
-															<div class="icon"><span class="fa fa-calendar"></span></div>
-															<input type="text" class="form-control checkout_date"
-																placeholder="Check Out Date">
-														</div>
-													</div>
-												</div>
-												<div class="col-lg d-flex">
-													<div class="form-group p-4">
-														<label for="#">Price Limit</label>
-														<div class="form-field">
-															<div class="select-wrap">
-																<div class="icon"><span
-																		class="fa fa-chevron-down"></span></div>
-																<select name="" id="" class="form-control">
-																	<option value="">$100</option>
-																	<option value="">$10,000</option>
-																	<option value="">$50,000</option>
-																	<option value="">$100,000</option>
-																	<option value="">$200,000</option>
-																	<option value="">$300,000</option>
-																	<option value="">$400,000</option>
-																	<option value="">$500,000</option>
-																	<option value="">$600,000</option>
-																	<option value="">$700,000</option>
-																	<option value="">$800,000</option>
-																	<option value="">$900,000</option>
-																	<option value="">$1,000,000</option>
-																	<option value="">$2,000,000</option>
-																</select>
-															</div>
-														</div>
-													</div>
-												</div>
-												<div class="col-lg d-flex">
-													<div class="form-group d-flex w-100 border-0">
-														<div class="form-field w-100 align-items-center d-flex">
-															<input type="submit" value="Search"
-																class="align-self-stretch form-control btn btn-primary p-0">
-														</div>
-													</div>
-												</div>
-											</div>
-										</form>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-	</section>
-
-	<section class="ftco-section services-section">
+	<!-- <section class="ftco-section services-section">
 		<div class="container">
 			<div class="row d-flex">
 				<div class="col-md-6 order-md-last heading-section pl-md-5 ftco-animate d-flex align-items-center">
 					<div class="w-100">
-						<span class="subheading">Welcome to Pacific</span>
+						<span class="subheading">Welcome to fairouz holidays</span>
 						<h2 class="mb-4">It's time to start your adventure</h2>
 						<p>A small river named Duden flows by their place and supplies it with the necessary regelialia.
 							It is a paradisematic country, in which roasted parts of sentences fly into your mouth.</p>
@@ -363,76 +285,80 @@
 				</div>
 			</div>
 		</div>
+	</section> -->
+
+	<!-- ✅ Swiper Section -->
+	<section class="image-slider-section" style="background-image: url('images/bg_3.jpg');">
+		<h2 class="top-destination-heading mb-4">Top Destination</h2>
+		<div class="overlay"></div>
+
+		<div class="swiper mySwiper">
+			<div class="swiper-wrapper">
+
+				<div class="swiper-slide">
+					<div class="img-container">
+						<img src="https://picsum.photos/id/1011/400/250" alt="Image 1">
+					</div>
+					<h3 class="img-title">Beautiful Mountains</h3>
+				</div>
+
+				<div class="swiper-slide">
+					<div class="img-container">
+						<img src="https://picsum.photos/id/1025/400/250" alt="Image 2">
+					</div>
+					<h3 class="img-title">Peaceful Dog</h3>
+				</div>
+
+				<div class="swiper-slide">
+					<div class="img-container">
+						<img src="https://picsum.photos/id/1035/400/250" alt="Image 3">
+					</div>
+					<h3 class="img-title">City Skyline</h3>
+				</div>
+
+				<div class="swiper-slide">
+					<div class="img-container">
+						<img src="https://picsum.photos/id/1040/400/250" alt="Image 4">
+					</div>
+					<h3 class="img-title">Sunny Beach</h3>
+				</div>
+
+				<div class="swiper-slide">
+					<div class="img-container">
+						<img src="https://picsum.photos/id/1045/400/250" alt="Image 5">
+					</div>
+					<h3 class="img-title">Misty Forest</h3>
+				</div>
+
+				<div class="swiper-slide">
+					<div class="img-container">
+						<img src="https://picsum.photos/id/1050/400/250" alt="Image 6">
+					</div>
+					<h3 class="img-title">Golden Desert</h3>
+				</div>
+				<div class="swiper-slide">
+					<div class="img-container">
+						<img src="https://picsum.photos/id/1050/400/250" alt="Image 6">
+					</div>
+					<h3 class="img-title">Golden Desert</h3>
+				</div>
+				<div class="swiper-slide">
+					<div class="img-container">
+						<img src="https://picsum.photos/id/1050/400/250" alt="Image 6">
+					</div>
+					<h3 class="img-title">Golden Desert</h3>
+				</div>
+
+			</div>
+
+			<!-- ✅ Arrows -->
+			<div class="swiper-button-prev"></div>
+			<div class="swiper-button-next"></div>
+		</div>
 	</section>
 
-	<section class="ftco-section img ftco-select-destination" style="background-image: url(images/bg_3.jpg);">
-		<div class="container">
-			<div class="row justify-content-center pb-4">
-				<div class="col-md-12 heading-section text-center ftco-animate">
-					<span class="subheading">Pacific Provide Places</span>
-					<h2 class="mb-4">Select Your Destination</h2>
-				</div>
-			</div>
-		</div>
-		<div class="container container-2">
-			<div class="row">
-				<div class="col-md-12">
-					<div class="carousel-destination owl-carousel ftco-animate">
-						<div class="item">
-							<div class="project-destination">
-								<a href="#" class="img" style="background-image: url(images/place-1.jpg);">
-									<div class="text">
-										<h3>Philippines</h3>
-										<span>8 Tours</span>
-									</div>
-								</a>
-							</div>
-						</div>
-						<div class="item">
-							<div class="project-destination">
-								<a href="#" class="img" style="background-image: url(images/place-2.jpg);">
-									<div class="text">
-										<h3>Canada</h3>
-										<span>2 Tours</span>
-									</div>
-								</a>
-							</div>
-						</div>
-						<div class="item">
-							<div class="project-destination">
-								<a href="#" class="img" style="background-image: url(images/place-3.jpg);">
-									<div class="text">
-										<h3>Thailand</h3>
-										<span>5 Tours</span>
-									</div>
-								</a>
-							</div>
-						</div>
-						<div class="item">
-							<div class="project-destination">
-								<a href="#" class="img" style="background-image: url(images/place-4.jpg);">
-									<div class="text">
-										<h3>Autralia</h3>
-										<span>5 Tours</span>
-									</div>
-								</a>
-							</div>
-						</div>
-						<div class="item">
-							<div class="project-destination">
-								<a href="#" class="img" style="background-image: url(images/place-5.jpg);">
-									<div class="text">
-										<h3>Greece</h3>
-										<span>7 Tours</span>
-									</div>
-								</a>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>
+
+
 
 	<section class="ftco-section">
 		<div class="container">
@@ -831,12 +757,12 @@
 					<div class="ftco-footer-widget pt-md-5 mb-4 ml-md-5">
 						<h2 class="ftco-heading-2">Infromation</h2>
 						<ul class="list-unstyled">
-							<li><a href="#" class="py-2 d-block">Online Enquiry</a></li>
-							<li><a href="#" class="py-2 d-block">General Enquiries</a></li>
-							<li><a href="#" class="py-2 d-block">Booking Conditions</a></li>
-							<li><a href="#" class="py-2 d-block">Privacy and Policy</a></li>
-							<li><a href="#" class="py-2 d-block">Refund Policy</a></li>
-							<li><a href="#" class="py-2 d-block">Call Us</a></li>
+							<li><a href="#" class="py-2 d-block">Home</a></li>
+							<li><a href="#" class="py-2 d-block">Our Packages</a></li>
+							<li><a href="#" class="py-2 d-block">About Us</a></li>
+							<li><a href="#" class="py-2 d-block">Contact Us</a></li>
+							<li><a href="#" class="py-2 d-block">Sitemap</a></li>
+
 						</ul>
 					</div>
 				</div>
@@ -844,12 +770,12 @@
 					<div class="ftco-footer-widget pt-md-5 mb-4">
 						<h2 class="ftco-heading-2">Experience</h2>
 						<ul class="list-unstyled">
-							<li><a href="#" class="py-2 d-block">Adventure</a></li>
-							<li><a href="#" class="py-2 d-block">Hotel and Restaurant</a></li>
-							<li><a href="#" class="py-2 d-block">Beach</a></li>
-							<li><a href="#" class="py-2 d-block">Nature</a></li>
-							<li><a href="#" class="py-2 d-block">Camping</a></li>
-							<li><a href="#" class="py-2 d-block">Party</a></li>
+							<li><a href="#" class="py-2 d-block">Terma And Conditions</a></li>
+							<li><a href="#" class="py-2 d-block">Privacy and policy</a></li>
+							<li><a href="#" class="py-2 d-block">Return Policy</a></li>
+							<li><a href="#" class="py-2 d-block">Blog</a></li>
+							<!-- <li><a href="#" class="py-2 d-block">Camping</a></li>
+							<li><a href="#" class="py-2 d-block">Party</a></li> -->
 						</ul>
 					</div>
 				</div>
@@ -858,12 +784,11 @@
 						<h2 class="ftco-heading-2">Have a Questions?</h2>
 						<div class="block-23 mb-3">
 							<ul>
-								<li><span class="icon fa fa-map-marker"></span><span class="text">203 Fake St. Mountain
-										View, San Francisco, California, USA</span></li>
-								<li><a href="#"><span class="icon fa fa-phone"></span><span class="text">+2 392 3929
-											210</span></a></li>
+								<li><span class="icon fa fa-map-marker"></span><span class="text">Kozhikode</span></li>
+								<li><a href="#"><span class="icon fa fa-phone"></span><span class="text">+91 90805
+											06020</span></a></li>
 								<li><a href="#"><span class="icon fa fa-paper-plane"></span><span
-											class="text">info@yourdomain.com</span></a></li>
+											class="text">fairouzholidays@gmail.com</span></a></li>
 							</ul>
 						</div>
 					</div>
@@ -874,9 +799,8 @@
 
 					<p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
 						Copyright &copy;
-						<script>document.write(new Date().getFullYear());</script> All rights reserved | This template
-						is made with <i class="fa fa-heart" aria-hidden="true"></i> by <a href="https://colorlib.com"
-							target="_blank">Colorlib</a>
+						<script>document.write(new Date().getFullYear());</script> All rights reserved | by <a
+							href="https://bloombizcreatives.com/" target="_blank">Bloombiz Creativities</a>
 						<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
 					</p>
 				</div>
@@ -910,6 +834,38 @@
 		src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
 	<script src="js/google-map.js"></script>
 	<script src="js/main.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+	<!-- Swiper Config -->
+	<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+	<script>
+		var swiper = new Swiper(".mySwiper", {
+			slidesPerView: 6,
+			spaceBetween: 20,
+			loop: true,
+			autoplay: {
+				delay: 2500,
+				disableOnInteraction: false,
+			},
+			pagination: {
+				el: ".swiper-pagination",
+				clickable: true,
+			},
+			navigation: {
+				nextEl: ".swiper-button-next",
+				prevEl: ".swiper-button-prev",
+			},
+			breakpoints: {
+				1200: { slidesPerView: 6 },
+				992: { slidesPerView: 4 },
+				768: { slidesPerView: 3 },
+				576: { slidesPerView: 2 },
+				0: { slidesPerView: 1 }
+			}
+		});
+	</script>
+
 
 </body>
 
